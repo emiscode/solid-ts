@@ -1,5 +1,4 @@
 import { Cargo } from "./cargo";
-import { ValidacaoError } from "./validacao-error";
 
 class Funcionario {
   constructor(
@@ -10,14 +9,8 @@ class Funcionario {
     private _dataUltimoReajuste: string
   ) { }
 
-  reajustarSalario(aumento: number) {
-    const percentualReajuste = aumento / this._salario
-
-    if (percentualReajuste > 0.4) {
-      throw new ValidacaoError('Reajuste não pode ser superior a 40% do salário')
-    }
-
-    this._salario += aumento
+  atualizarSalario(novoSalario: number) {
+    this._salario = novoSalario
     this._dataUltimoReajuste = new Date().toISOString()
   }
 

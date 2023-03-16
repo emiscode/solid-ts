@@ -1,6 +1,8 @@
 import { Cargo } from "./cargo"
 import { Funcionario } from "./funcionario"
-import { ValidacaoError } from "./validacao-error"
+import { ReajusteSalario } from "./reajuste-salario"
+import { ValidacaoPercentual } from "./validacao-percentual"
+import { ValidacaoPeriodicidade } from "./validacao-periodicidade"
 
 try {
 
@@ -16,11 +18,16 @@ try {
 
   console.log(JSON.stringify(funcionario))
 
-  funcionario.reajustarSalario(300)
+  const reajusteSalario = new ReajusteSalario([
+    new ValidacaoPercentual(),
+    new ValidacaoPeriodicidade()
+  ])
+
+  reajusteSalario.reajustarSalarioFuncionario(funcionario, 300)
 
   console.log(JSON.stringify(funcionario))
 
-  funcionario.reajustarSalario(800)
+  reajusteSalario.reajustarSalarioFuncionario(funcionario, 800)
 
 } catch (err) {
   console.log(Object(err).message)
