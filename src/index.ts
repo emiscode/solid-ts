@@ -1,8 +1,9 @@
-import { Cargo } from "./cargo"
-import { Funcionario } from "./funcionario"
-import { ReajusteSalario } from "./reajuste-salario"
-import { ValidacaoPercentual } from "./validacao-percentual"
-import { ValidacaoPeriodicidade } from "./validacao-periodicidade"
+import { Cargo } from "./entity/cargo"
+import { Funcionario } from "./entity/funcionario"
+import { ReajusteSalario } from "./service/reajuste/reajuste-salario"
+import { ValidacaoPercentual } from "./service/reajuste/validacao-percentual"
+import { ValidacaoPeriodicidade } from "./service/reajuste/validacao-periodicidade"
+
 
 try {
 

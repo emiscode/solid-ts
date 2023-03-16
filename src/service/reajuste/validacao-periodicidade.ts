@@ -1,6 +1,6 @@
-import { Funcionario } from "./funcionario"
-import { ValidacaoError } from "./validacao-error"
+import { Funcionario } from "../../entity/funcionario"
 import { ValidacaoReajuste } from "./validacao-reajuste"
+import { ValidacaoError } from "../../error/validacao-error"
 
 class ValidacaoPeriodicidade implements ValidacaoReajuste {
   validar(funcionario: Funcionario): void {

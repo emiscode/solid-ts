@@ -1,5 +1,5 @@
-import { Funcionario } from "./funcionario";
-import { ValidacaoReajuste } from "./validacao-reajuste";
+import { Funcionario } from "../../entity/funcionario"
+import { ValidacaoReajuste } from "./validacao-reajuste"
 
 class ReajusteSalario {
   constructor(private _validacoes: Array<ValidacaoReajuste>) { }
