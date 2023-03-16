@@ -1,10 +1,10 @@
-import { Cargo } from "./cargo";
+import { ECargo } from "./cargo"
 
 class Funcionario {
   constructor(
     private _nome: string,
     private _cpf: string,
-    private _cargo: Cargo,
+    private _cargo: ECargo,
     private _salario: number,
     private _dataUltimoReajuste: string
   ) { }
@@ -12,6 +12,10 @@ class Funcionario {
   atualizarSalario(novoSalario: number) {
     this._salario = novoSalario
     this._dataUltimoReajuste = new Date().toISOString()
+  }
+
+  promover(novoCargo: ECargo) {
+    this._cargo = novoCargo
   }
 
   get nome(): string {
@@ -22,7 +26,7 @@ class Funcionario {
     return this._cpf
   }
 
-  get cargo(): Cargo {
+  get cargo(): string {
     return this._cargo
   }
 

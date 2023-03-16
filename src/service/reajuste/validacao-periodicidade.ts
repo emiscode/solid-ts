@@ -8,7 +8,7 @@ class ValidacaoPeriodicidade implements ValidacaoReajuste {
     const dataUltimoReajuste = funcionario.dataUltimoReajuste
     const mesesDesdeUltimoReajuste = new Date(dataUltimoReajuste).getMonth() - new Date(dataAtual).getMonth()
 
-    if (mesesDesdeUltimoReajuste < 6) {
+    if (mesesDesdeUltimoReajuste < 6 && mesesDesdeUltimoReajuste !== 0) {
       throw new ValidacaoError('Intervalo entre reajustes deve ser de no mínimo 6 meses')
     }
   }
