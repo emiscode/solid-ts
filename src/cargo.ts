@@ -1,0 +1,8 @@
+enum Cargo {
+  ASSISTENTE = 'ASSISTENTE',
+  ANALISTA = 'ANALISTA',
+  ESPECIALISTA = 'ESPECIALISTA',
+  GERENTE = 'GERENTE'
+}
+
+export { Cargo }
