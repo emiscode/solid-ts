@@ -8,9 +8,11 @@
     - Allow changes by adding new code rather than changing existing code
     - A software should be open for extension but closed for modification
 - Liskov Substitution
-    - Use ontracts that allow classes to be substituted one for another
+    - Use contracts that allow classes to be substituted one for another
+    - Composite is a good approach when inheritance is not possible
 - Interface Segregation
     - Avoid depending on things that you don`t use
+    - A class should not be forced to depend on methods it won`t use
 - Dependency Inversion
     - High-level policy should not depend on low-level details
     - Details should depende on policies
