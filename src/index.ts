@@ -1,4 +1,5 @@
 import { ECargo } from "./entity/cargo"
+import { DadosPessoais } from "./entity/dados-pessoais"
 import { Funcionario } from "./entity/funcionario"
 import { PromoverFuncionario } from "./service/promocao/promover-funcionario"
 import { ReajusteSalario } from "./service/reajuste/reajuste-salario"
@@ -11,10 +12,12 @@ try {
   console.log('INFO => OK')
 
   const funcionario = new Funcionario(
-    'Emilio',
-    '000-000-000-00',
-    ECargo.ESPECIALISTA,
-    1500,
+    new DadosPessoais(
+      'Emilio',
+      '000-000-000-00',
+      ECargo.ESPECIALISTA,
+      1500,
+    ),
     new Date().toISOString()
   )
 

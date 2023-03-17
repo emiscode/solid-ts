@@ -4,7 +4,7 @@ import { ValidacaoError } from "../../error/validacao-error"
 
 class ValidacaoPercentual implements ValidacaoReajuste {
   validar(funcionario: Funcionario, aumento: number): void {
-    const percentualReajuste = aumento / funcionario.salario
+    const percentualReajuste = aumento / funcionario.dadosPessoais.salario
 
     if (percentualReajuste > 0.4) {
       throw new ValidacaoError('Reajuste não pode ser superior a 40% do salário')

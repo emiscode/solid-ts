@@ -9,7 +9,7 @@ class ReajusteSalario {
       validacao.validar(funcionario, aumento)
     })
 
-    const salarioReajustado = funcionario.salario + aumento
+    const salarioReajustado = funcionario.dadosPessoais.salario + aumento
     funcionario.atualizarSalario(salarioReajustado)
   }
 }
